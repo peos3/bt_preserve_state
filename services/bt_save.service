@@ -1,0 +1,12 @@
+[Unit]
+Description=Save last bluetooth state
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/opt/bt_state
+ExecStart=/bin/true
+ExecStop=/opt/bt_state/bt_save.sh
+
+[Install]
+WantedBy=multi-user.target

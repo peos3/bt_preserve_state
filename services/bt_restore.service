@@ -1,0 +1,11 @@
+[Unit]
+Description=Restore last bluetooth state
+
+[Service]
+Type=oneshot
+RemainAfterExit=false
+WorkingDirectory=/opt/bt_state
+ExecStart=/opt/bt_state/bt_restore.sh
+
+[Install]
+WantedBy=multi-user.target
